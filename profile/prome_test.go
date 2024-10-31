@@ -16,6 +16,9 @@ func Test_Count(t *testing.T) {
 	recordGaugeMetrics()
 	recordHistogramMetrics()
 
+	client := http.Client{}
+	client.Post()
+
 	http.Handle("/metrics", promhttp.Handler())
 	http.ListenAndServe(":12345", nil)
 }

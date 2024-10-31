@@ -34,6 +34,17 @@ func main() {
 	fmt.Println("///////////////////////////////////////////////////////////////")
 	nilSlice()
 
+	// Go中对nil的Slice和空Slice的处理是一致的吗
+	// http://wearygods.online/articles/2021/04/19/1618823886966.html#toc_h4_28
+	// panic: runtime error: index out of range [0] with length 0
+	//
+	//var slice []int
+	//slice[1] = 0
+
+	//slice := make([]int, 0)
+	//slice[1] =  0
+	//
+
 	s = append(s, 1)
 }
 
