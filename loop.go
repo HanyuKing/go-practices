@@ -26,3 +26,13 @@ func forLoop3() {
 		}
 	}
 }
+
+func forLoop4() {
+	for i := 2; i <= 10; i += 2 {
+		fmt.Print(i)
+	}
+}
+
+func main() {
+	forLoop4()
+}
