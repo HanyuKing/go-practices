@@ -4,12 +4,14 @@ import (
 	"context"
 	"fmt"
 	"math/rand"
+	"syscall"
+	"time"
+
 	"os"
 	"os/signal"
 	"sync"
-	"syscall"
+
 	"testing"
-	"time"
 )
 
 // deadlock test
