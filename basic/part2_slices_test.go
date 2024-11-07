@@ -42,8 +42,8 @@ func Test5(t *testing.T) {
 	y = append(y, 6)
 	x[0] = 0
 
-	fmt.Printf("%d \n", &x[0])
-	fmt.Printf("%d \n", &y[0])
+	fmt.Printf("%d %d \n", &x[0], &x[1])
+	fmt.Printf("%d %d \n", &y[0], &y[1])
 
 	fmt.Println(x) // 0,2,3,4,5
 	fmt.Println(y) // 1,2,3,4,6
