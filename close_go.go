@@ -12,6 +12,7 @@ func main() {
 	//
 	//in := make(chan int)
 	//go func(in <-chan int) {
+	//	defer fmt.Println("worker exit")
 	//	// Using for-range to exit goroutine
 	//	// range has the ability to detect the close/end of a channel
 	//	for x := range in {
@@ -22,11 +23,13 @@ func main() {
 	//for i := 0; i < 10; i++ {
 	//	in <- i
 	//}
+	//time.Sleep(time.Second)
 
 	// 2. 使用select case ,ok退出
 	//in := make(chan int)
 	//processedCnt := 0
 	//go func() {
+	//	defer fmt.Println("worker exit")
 	//	// in for-select using ok to exit goroutine
 	//	for {
 	//		select {
@@ -52,6 +55,7 @@ func main() {
 	//in1 := make(chan int)
 	//in2 := make(chan int)
 	//go func() {
+	//	defer fmt.Println("worker exit")
 	//	// in for-select using ok to exit goroutine
 	//	for {
 	//		select {
@@ -87,6 +91,7 @@ func main() {
 	//in2 <- 22
 	//time.Sleep(time.Second)
 	//close(in2)
+	//time.Sleep(time.Second)
 
 	// 3. 使用退出通道
 	//stopCh := make(chan struct{})
